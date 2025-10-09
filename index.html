@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScreenQuest - Movie Explorer</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/hero-slideshow.js"></script>
+    <script src="js/main.mjs"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">🎬 ScreenQuest</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+          <li><a href="details.html">Details</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 🌌 HERO SECTION -->
+      <section class="hero">
+        <div class="hero-slideshow">
+          <div class="slide active">
+            <img src="images/image1.jpg" alt="Featured Movie 1" >
+          </div>
+          <div class="slide">
+            <img src="images/image2.jpg" alt="Featured Movie 2" >
+          </div>
+          <div class="slide">
+            <img src="images/image3.jpg" alt="Featured Movie 3" >
+          </div>
+          <div class="slide">
+            <img src="images/image4.jpg" alt="Featured Movie 4">
+          </div>
+          <div class="slide">
+            <img src="images/image5.jpg" alt="Featured Movies 5">
+          </div>
+        </div>
+
+        <div class="hero-overlay">
+          <div class="hero-content">
+            <h2>Discover Your Next Movie Adventure</h2>
+            <p>Search. Watch. Save. All In One Place.</p>
+
+            <form id="searchForm">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Movies, TV Shows..."
+                required
+              />
+              <button type="submit">🔍 Search</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- 🔥 TRENDING SECTION -->
+      <section class="trending">
+        <h2>🔥 Trending Movies</h2>
+        <div id="trendingGrid" class="movie-grid">
+          <!-- JavaScript will inject movie cards here -->
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; <span id="year"></span> ScreenQuest |
+        Last Updated: <span id="lastModified"></span>
+      </p>
+    </footer>
+  </body>
+</html>

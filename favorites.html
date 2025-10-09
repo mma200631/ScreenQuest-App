@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width= device-width, initial-scale=1.0">
+        <title>ScreenQuest- Movie Explorer</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+        <script src="js/main.mjs"></script>
+    </head>
+    <body>
+        <header>
+            <h1 class="logo"> 🎬 ScreenQuest</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" active>Home</a></li>
+                    <li><a href="favorites.html">Favorites</a></li>
+                    <li> <a href="details.html">Details</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <!-- 🌟 FAVORITES SECTION -->
+      <section class="favorites">
+        <h2>⭐ Your Favorite Movies</h2>
+        <p class="subtitle">View and manage your saved watchlist below.</p>
+
+        <!-- Container for dynamically loaded favorites -->
+        <div id="favoritesGrid" class="movie-grid">
+          <!-- JavaScript will inject saved favorites here -->
+        </div>
+
+        <!-- Shown if no favorites are saved -->
+        <div id="noFavorites" class="empty-state">
+          <p>You haven’t added any favorites yet!</p>
+          <a href="index.html" class="btn">🔍 Explore Movies</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; <span id="year"></span> ScreenQuest |
+        Last Updated: <span id="lastModified"></span>
+      </p>
+    </footer>     
+        
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ScreenQuest - Movie Explorer</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">🎬 ScreenQuest</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+          <li><a href="details.html">Details</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+        <!-- Movie Details Section -->
+      <section class="movie-details">
+        <div class="movie-poster">
+          <img
+            id="moviePoster"
+            src="images/placeholder-poster.jpg"
+            alt="Movie Poster"
+          />
+        </div>
+
+        <div class="movie-info">
+          <h2 id="movieTitle">Movie Title</h2>
+          <p id="movieSynopsis">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. This is a
+            placeholder synopsis for the movie details page.
+          </p>
+
+          <ul class="movie-meta">
+            <li><strong>Genre:</strong> <span id="movieGenre">Action, Drama</span></li>
+            <li><strong>Release Date:</strong> <span id="movieRelease">2024-07-12</span></li>
+            <li><strong>Runtime:</strong> <span id="movieRuntime">120 min</span></li>
+            <li><strong>Rating:</strong> <span id="movieRating">8.5/10</span></li>
+          </ul>
+
+          <div class="movie-trailer">
+            <h3>🎥 Watch Trailer</h3>
+            <video id="movieTrailer" controls poster="images/placeholder-poster.jpg">
+              <source src="videos/sample-trailer.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        &copy; <span id="year"></span> ScreenQuest | Last Updated:
+        <span id="lastModified"></span>
+      </p>
+    </footer> 
+  </body>
+</html>
