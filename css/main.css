@@ -148,14 +148,233 @@ nav a.active {
   font-family: 'Montserrat', sans-serif;
   color: #e50914;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .movie-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 2fr));
   gap: 1.5rem;
 }
+
+.movie-grid {
+  background: #2a2e38;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-info {
+  padding: 2rem;
+  text-align: left;
+}
+.movie-grid img{
+    width:80%;
+    height:40%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.details-btn {
+  /*margin-top: 0.5rem;*/
+  margin-bottom: 0.6rem;
+  padding: 0.5rem 1rem;
+  background: #e50914;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.details-btn:hover {
+  background: #b20710;
+}
+
+/* === MOVIE DETAILS PAGE === */
+.movie-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #2a2e38; /* matches your movie grid */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.movie-poster img {
+  width: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+}
+
+.movie-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.movie-info h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: #e50914;
+  margin-bottom: 1rem;
+}
+
+.movie-info p {
+  color: #f4f4f4;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.movie-meta {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.movie-meta li {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #f4f4f4;
+}
+
+.movie-meta li strong {
+  color: #e50914;
+}
+
+.movie-trailer {
+  margin-top: 1rem;
+}
+
+.movie-trailer iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Favorites button */
+#addFavoriteBtn {
+  background-color: #e50914; /* Neon accent */
+  color: #f4f4f4; /* Light text */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  margin-top: 15px;
+}
+
+#addFavoriteBtn:hover {
+  background-color: #ff1a30; /* Slightly lighter neon on hover */
+  transform: scale(1.05);
+}
+
+/* Optional: Add some spacing if needed */
+.movie-details #addFavoriteBtn {
+  display: inline-block;
+}
+
+/* === STREAMING PLATFORMS === */
+.streaming {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #2a2e38; /* Matches movie details and grid */
+  border-radius: 10px;
+}
+
+.streaming h3 {
+  color: #e50914;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+}
+
+.streaming-source {
+  background-color: #1c1f26; /* Slightly darker than container */
+  color: #f4f4f4;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.streaming-source a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.streaming-source:hover {
+  transform: translateY(-2px);
+  background-color: #2f323b;
+}
+
+/* === RECOMMENDATIONS === */
+#recommendations {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+#recommendations .movie-card {
+  background-color: #2a2e38;
+  color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+#recommendations .movie-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+#recommendations .movie-card h3 {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  padding: 0 0.3rem;
+}
+
+#recommendations .movie-card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* === RESPONSIVE ADJUSTMENTS === */
+@media (max-width: 768px) {
+  .streaming-source {
+    font-size: 0.9rem;
+  }
+
+  #recommendations .movie-card img {
+    height: 180px;
+  }
+}
+
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .movie-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-poster img {
+    width: 80%;
+  }
+
+  .movie-trailer iframe {
+    height: 200px;
+  }
+}
+
 
 /* SIMPLE ANIMATIONS */
 @keyframes fadeIn {

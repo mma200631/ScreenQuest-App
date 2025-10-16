@@ -1,3 +1,8 @@
+import { fetchFromTMDB } from './utils.mjs';
+import { loadTrending } from './search.mjs';
+ document.addEventListener("DOMContentLoaded", loadTrending);
+
+
 // FOOTER DATE SCRIPT
 document.addEventListener("DOMContentLoaded", () => {
   const yearSpan = document.getElementById("year");

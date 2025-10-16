@@ -9,21 +9,23 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <script src="js/details.mjs" type="module"></script>
   </head>
   <body>
     <header>
       <h1 class="logo">🎬 ScreenQuest</h1>
       <nav>
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html" >Home</a></li>
           <li><a href="favorites.html">Favorites</a></li>
-          <li><a href="details.html">Details</a></li>
+          <li><a href="details.html" class="active">Details</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-        <!-- Movie Details Section -->
+        
+      <!-- Movie Details Section -->
       <section class="movie-details">
         <div class="movie-poster">
           <img
@@ -34,28 +36,39 @@
         </div>
 
         <div class="movie-info">
-          <h2 id="movieTitle">Movie Title</h2>
-          <p id="movieSynopsis">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. This is a
-            placeholder synopsis for the movie details page.
-          </p>
+          <h2 id="movieTitle">Loading...</h2>
+          <p id="movieSynopsis">Loading synopsis...</p>
 
           <ul class="movie-meta">
-            <li><strong>Genre:</strong> <span id="movieGenre">Action, Drama</span></li>
-            <li><strong>Release Date:</strong> <span id="movieRelease">2024-07-12</span></li>
-            <li><strong>Runtime:</strong> <span id="movieRuntime">120 min</span></li>
-            <li><strong>Rating:</strong> <span id="movieRating">8.5/10</span></li>
+            <li><strong>Genre:</strong> <span id="movieGenre">N/A</span></li>
+            <li><strong>Release Date:</strong> <span id="movieRelease">N/A</span></li>
+            <li><strong>Runtime:</strong> <span id="movieRuntime">N/A</span></li>
+            <li><strong>Rating:</strong> <span id="movieRating">N/A</span></li>
           </ul>
 
           <div class="movie-trailer">
             <h3>🎥 Watch Trailer</h3>
-            <video id="movieTrailer" controls poster="images/placeholder-poster.jpg">
-              <source src="videos/sample-trailer.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <div id="movieTrailer">Loading trailer...</div>
           </div>
         </div>
       </section>
+      <div class="movie-actions">
+  <button id="addFavoriteBtn">⭐ Add to Favorites</button>
+</div>
+
+
+      <!-- Streaming Platforms -->
+    <section class="streaming">
+    <h3>📺 Streaming Platforms</h3>
+    <div id="streamingPlatforms">Loading streaming info...</div>
+    </section>
+
+    <!-- Recommended Movies -->
+    <section class="recommendations">
+    <h3>⭐ Recommended Movies</h3>
+    <div id="recommendations" class="movie-grid"></div>
+    </section>
+
     </main>
     <footer>
       <p>
